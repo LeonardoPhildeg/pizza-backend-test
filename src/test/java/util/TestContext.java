@@ -6,8 +6,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import pojo.User;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static java.lang.ThreadLocal.withInitial;
@@ -67,11 +67,13 @@ public enum TestContext {
     }
 
     public String getToken(){
+        User user = new User();
+        user.setEmail("leonardo@mail.com");
+        user.setPassword("123");
+
         String token = RestAssured.given()
-                .body("{\n" +
-                        "  \"email\": \"leonardo@mail.com\",\n" +
-                        "  \"password\": \"123\"\n" +
-                        "}")
+                .baseUri("http://localhost:3333")
+                .body(user)
                 .contentType(ContentType.JSON)
                 .when()
                 .post("/session")
