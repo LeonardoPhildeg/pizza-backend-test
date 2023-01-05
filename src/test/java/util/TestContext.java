@@ -68,7 +68,7 @@ public enum TestContext {
 
     public String getToken(){
         User user = new User();
-        user.setEmail("leonardo@mail.com");
+        user.setEmail("testUser@mail.com");
         user.setPassword("123");
 
         String token = RestAssured.given()

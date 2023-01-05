@@ -71,9 +71,9 @@ public class UserSteps extends Context {
         this.testContext().setResponse(this.response);
         JsonPath jsonResponse = new JsonPath(response);
 
-        assertThat((String) jsonResponse.get("name")).isEqualTo("Leonardo");
-        assertThat((String) jsonResponse.get("email")).isEqualTo("leonardo@mail.com");
-        assertThat((String) jsonResponse.get("id")).isEqualTo("ff6ffae8-cbbf-424b-a894-c7891e537ad5");
+        assertThat((String) jsonResponse.get("id")).isNotNull();
+        assertThat((String) jsonResponse.get("name")).isEqualTo("testName");
+        assertThat((String) jsonResponse.get("email")).isEqualTo("testEmail@email");
     }
 
 }
