@@ -7,8 +7,6 @@ import io.cucumber.java.BeforeAll;
 import util.TestContext;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
