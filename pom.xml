@@ -15,6 +15,10 @@
         <log4j.version>2.19.0</log4j.version>
     </properties>
 
+    <build>
+        <defaultGoal>install</defaultGoal>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>
