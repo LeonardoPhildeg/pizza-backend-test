@@ -18,17 +18,29 @@ public class Hook  {
 
     @BeforeAll
     public static void setup() throws SQLException {
-        database.createUserDefault(connection);
+        try{
+            database.createUserDefault(connection);
+        } catch (Throwable e) {
+            throw new RuntimeException("DEU CACA NO SETUP", e);
+        }
     }
 
     @After
     public void afterScenario() {
-        TestContext.CONTEXT.reset();
+        try{
+            TestContext.CONTEXT.reset();
+        } catch (Throwable e) {
+            throw new RuntimeException("DEU CACA NO AFTER", e);
+        }
     }
 
     @AfterAll
     public static void afterAll() {
-        database.clearData(connection);
+        try{
+            database.clearData(connection);
+        } catch (Throwable e) {
+            throw new RuntimeException("DEU CACA NO FINAL", e);
+        }
     }
 
 }
