@@ -1,5 +1,6 @@
 Feature: User
 
+  @Only
   Scenario Outline: Create new user
     Given I provide email and password
     When I call user endpoint
