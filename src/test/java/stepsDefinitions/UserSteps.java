@@ -21,8 +21,8 @@ public class UserSteps extends Context {
     @Given("I provide email and password")
     public void iProvideAndPassword() {
         User user = new User();
-        user.setName("testName2");
-        user.setEmail("testEmail2@email");
+        user.setName("testName");
+        user.setEmail("testEmail@email");
         user.setPassword("123");
 
         this.spec = RestAssured.given()
