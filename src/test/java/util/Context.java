@@ -8,7 +8,7 @@ import static util.TestContext.CONTEXT;
 
 public abstract class Context {
 
-    public static final String BASE_URI = System.getenv("BASE_URI");
+    public static final String BASE_URI = "http://pizza-api:3333";
 
     public TestContext testContext() {
         return CONTEXT;
@@ -20,4 +20,5 @@ public abstract class Context {
                 .setContentType(ContentType.JSON)
                 .build();
     }
+
 }

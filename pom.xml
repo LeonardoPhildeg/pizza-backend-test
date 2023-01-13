@@ -27,9 +27,6 @@
                         <include>**/Runner.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <environmentVariables>
-                        <BASE_URI>http://host.docker.internal:3333</BASE_URI>
-                    </environmentVariables>
                 </configuration>
             </plugin>
         </plugins>
