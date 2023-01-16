@@ -8,7 +8,8 @@ import static util.TestContext.CONTEXT;
 
 public abstract class Context {
 
-    public static final String BASE_URI = "http://pizza-api:3333";
+//    public static final String BASE_URI = "http://pizza-api:3333";
+    public static final String BASE_URI = System.getenv("BASE_URI");
 
     public TestContext testContext() {
         return CONTEXT;
