@@ -8,7 +8,7 @@ public class Database {
 
     @SneakyThrows
     public Connection getConnectionDataBase(){
-        String url = "jdbc:postgresql://localhost:5432/pizza-db?schema=public";
+        String url = "jdbc:postgresql://"+System.getenv("DB_HOST")+"/pizza-db?schema=public";
         Connection connection = DriverManager.getConnection(url, "postgres", "pizza-postgres");
         connection.createStatement();
         return connection;
