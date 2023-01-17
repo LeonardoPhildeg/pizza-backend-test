@@ -25,7 +25,7 @@ public class Hook {
         }
     }
 
-//    @After
+    @After
     public void afterScenario() {
         try{
             TestContext.CONTEXT.reset();
@@ -34,7 +34,7 @@ public class Hook {
         }
     }
 
-//    @AfterAll
+    @AfterAll
     public static void afterAll() {
         try{
             database.clearData(connection);
