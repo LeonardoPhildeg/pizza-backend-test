@@ -2,7 +2,9 @@ package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import stepsDefinitions.Hook;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -12,5 +14,9 @@ import org.junit.runner.RunWith;
 )
 public class Runner {
 
+    @BeforeClass
+    public static void setup() {
+        new Hook();
+    }
 
 }

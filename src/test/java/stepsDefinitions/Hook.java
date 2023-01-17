@@ -8,7 +8,6 @@ import io.cucumber.java.BeforeAll;
 import util.TestContext;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 
 public class Hook {
 
@@ -17,7 +16,7 @@ public class Hook {
     private static final Connection connection = database.getConnectionDataBase();
 
     @BeforeAll
-    public static void setup() throws SQLException {
+    public static void setup() {
         try{
             database.createUserDefault(connection);
         } catch (Throwable e) {
